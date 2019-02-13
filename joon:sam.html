@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  <link href="https://fonts.googleapis.com/css?family=Hind+Guntur" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet/style.css">
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body>
+  
+  <script type="text/javascript">
+  	
+function calc()
+
+{
+	var activity1 = parseInt(document.getElementById('activity1').value);
+		var activity2 = parseInt(document.getElementById('activity2').value);
+	var activity3 = parseInt(document.getElementById('activity3').value);
+	var oper = document.getElementById('operators').value;
+
+	if(oper === '+')
+	{
+		var activity3 = document.getElementById('result').value = activity1+activity2+activity3 + "hours";
+
+	}
+
+if(oper === '-')
+	{
+		var activity3 = document.getElementById('result').value = activity1-activity2-activity3;
+
+	}
+
+if(oper === '/')
+	{
+		var activity3 = document.getElementById('result').value = activity1/activity2/activity3;
+
+	}
+
+if(oper === '*')
+	{
+		var activity3 = document.getElementById('result').value = activity1*activity2*activity3;
+
+	}
+
+
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(calc);
+
+      function calc() {
+console.log(activity1);
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['activity1',parseInt(activity1)],
+          ['activity2',parseInt(activity2)],
+         ['activity3',parseInt(activity3)],
+        ]);
+
+        var options = {
+          title: 'My Daily Activities'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+
+
+}
+
+
+
+function calculate()
+
+{
+	var activityone = parseInt(document.getElementById('activityone').value);
+		var activitytwo = parseInt(document.getElementById('activitytwo').value);
+	var activitythree = parseInt(document.getElementById('activitythree').value);
+	var oper = document.getElementById('operators1').value;
+
+	if(oper === '+')
+	{
+		var activitythree = document.getElementById('result1').value = activityone+activitytwo+activitythree + "hours";
+	}
+
+if(oper === '-')
+	{
+		var activitythree = document.getElementById('result1').value = activityone-activitytwo-activitythree;
+
+	}
+
+if(oper === '/')
+	{
+		var activity3 = document.getElementById('result1').value = activityone/activitytwo/activitythree;
+
+	}
+
+if(oper === '*')
+	{
+		var activity3 = document.getElementById('result1').value = activityone*activitytwo*activitythree;
+
+	}
+
+}
+
+function showJoon() {
+  var x = document.getElementById("joon");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  
+  }
+
+}
+
+
+
+function showSam() {
+  var x = document.getElementById("sam");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+
+
+}
+
+
+
+  </script>
+
+
+
+  <h1> welcome back to javascript :O </h1>
+
+<div id="overArchingDiv">
+
+<h2 onclick="showJoon()";>Joon</h2>
+  
+<div id="joon">
+  
+  <p id="title">work</p>
+  <input type="text" name="Work" id="activity1"/>
+<br>
+<br>
+
+<p id="title">sleep</p>
+    <input type="text" name="Sleep" id="activity2"/>
+<br>
+<br>
+<p id="title">play</p>
+  <input type="text"  name="Play" id="activity3"/>
+<br>
+<br>
+
+<select id="operators">
+
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="/">/</option>
+	<option value="*">x</option>
+</select>
+  <br>
+<br>
+  
+  <button onclick="calc();"></button>
+
+<br>
+<br>
+  <input type="text" id="result"/>
+<br>
+<br>
+</div>
+
+    <div id="piechart" style="width: 500px; height: 200px;"></div>
+
+
+<h2 onclick="showSam()";>Sam</h2>
+  
+<div id="sam">
+  
+  <p id="title">work</p>
+  <input type="text" name="WORK" id="activityone"/>
+<br>
+<br>
+
+<p id="title">sleep</p>
+    <input type="text" name="Sleep" id="activitytwo"/>
+<br>
+<br>
+<p id="title">play</p>
+  <input type="text"  name="Play" id="activitythree"/>
+<br>
+<br>
+
+<select id="operators1">
+
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="/">/</option>
+	<option value="*">x</option>
+</select>
+  <br>
+<br>
+  <button onclick="calculate();"></button>
+
+<br>
+<br>
+  <input type="text" id="result1" value="hours"/>
+<br>
+<br>
+
+</div>
+
+
+
+</div>
+  </body>
+</html>

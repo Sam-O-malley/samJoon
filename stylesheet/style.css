@@ -1,0 +1,70 @@
+body{
+	background: lightblue;}
+
+
+#overArchingDiv{
+display: flex;
+margin:auto;
+
+}
+
+#joon{
+	padding-left:10%;
+	padding-right:5%;
+	display: none;
+	transition: height 350ms ease-in-out;
+
+}
+
+#sam{
+padding-left:10%;
+	display: none;
+}
+
+.button{
+	height:100px;
+}
+
+#title{
+	margin-left:37%;
+}
+
+input{
+	height:20px;
+}
+
+h2{
+	padding:5%;
+	font-family: 'Hind Guntur', sans-serif;
+}
+
+h2:hover{
+	color:red;
+	opacity: 0.6;
+	transition-duration: 1s;
+}
+
+	p{
+	font-family: 'Hind Guntur', sans-serif;
+	}
+
+	h1{
+			font-family: 'Hind Guntur', sans-serif;
+			padding-left:5%;
+	}
+
+button{
+	margin-left:40%;
+}
+
+select{
+	margin-left:30%;
+}
+
+#piechart{
+	margin-top:30%;
+}
+
+
+
+
